@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+
+        var n1 = 0;
+        var n2 = 1;
+        var n3 = 0;
+        var count = 20;
+        var text = ' 0, 1';
+
+        for (var i = 2; i < count; i++){
+            n3 = n1 + n2;
+            text += ', ' + n3;
+            n1 = n2;
+            n2 = n3;
+
+        }
+        document.getElementById('display').innerHTML = text;
+    </script>
+</body>
+</html>

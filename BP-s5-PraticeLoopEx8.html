@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="play()">Start</button><br/>
+    <div id="display"></div>
+</body>
+    <script>
+        function play() {
+            var from = parseInt(prompt('From: '));
+            var to = parseInt(prompt('To: '));
+            var number = 0 ;
+            var random = Math.floor(Math.random() * (to - from) + from);
+            var count = 0;
+
+            while (count < 3){
+                number = parseInt(prompt('Enter your lucky number: '));
+                if (number == random){
+                    alert('Congratulation you guess right number !!');
+                    break;
+                }else if (number < random) {
+                    count++;
+                    alert('Strike ' + count);
+                    alert('Your number is less ');
+                }else {
+                    count++;
+                    alert('Strike ' + count);
+                    alert('Your number is less ');
+                }
+                if (count == 3){
+                    alert('Good luck for next time !');
+                }
+            }
+
+        }
+    </script>
+</html>
